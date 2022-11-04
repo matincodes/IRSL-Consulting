@@ -1,0 +1,25 @@
+.header{
+    height: 100vh;
+    background-image:  linear-gradient(to right bottom,
+    $color-primary, 
+     $color-secondary),
+    url(../../img/consulting-pic-1.jpg);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    animation: change 15s infinite ease-in-out;
+
+    &__text-box{
+        @include center
+    }
+
+    &__logo{
+        position: absolute;
+        top: 25px;
+        left: 40px;
+    }
+}
+
+

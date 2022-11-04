@@ -1,0 +1,21 @@
+.heading__primary{
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-main{
+        display: block;
+        font-family: 'Bungee Outline', cursive;
+        font-size: 65px;
+        margin-left: 60px;
+        letter-spacing: 85px;
+    }
+
+    &-sub{
+        display: block;
+        font-size: 20px;
+        letter-spacing: 10px;
+        font-weight: 400;
+    }
+}
+

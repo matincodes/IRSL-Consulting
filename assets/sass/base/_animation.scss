@@ -1,0 +1,32 @@
+@keyframes change{
+    0%
+    {
+            background-image: linear-gradient(to right bottom,
+            $color-primary, 
+            $color-secondary), url(../../img/consulting-pic-1.jpg);
+    }
+    25%
+    {
+            background-image: linear-gradient(to right bottom,
+            $color-primary, 
+            $color-secondary), url(../../img/consulting-pic-2.jpg);
+    }
+    50%
+    {
+            background-image: linear-gradient(to right bottom,
+            $color-primary, 
+            $color-secondary), url(../../img/consulting-pic-3.jpg);
+    }
+    75%
+    {
+            background-image: linear-gradient(to right bottom,
+            $color-primary, 
+            $color-secondary), url(../../img/consulting-pic-4.jpg);
+    }
+    100%
+    {
+            background-image: linear-gradient(to right bottom,
+            $color-primary, 
+            $color-secondary), url(../../img/consulting-pic-1.jpg);
+    }
+}
