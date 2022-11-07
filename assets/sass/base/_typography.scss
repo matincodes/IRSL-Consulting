@@ -1,21 +1,57 @@
-.heading__primary{
-    color: $color-white;
-    text-transform: uppercase;
-    text-align: center;
+.heading{
 
-    &-main{
-        display: block;
-        font-family: 'Bungee Outline', cursive;
-        font-size: 65px;
-        margin-left: 60px;
-        letter-spacing: 85px;
+    &__primary{
+            color: $color-white;
+            text-transform: uppercase;
+            text-align: center;
+
+            &-main{
+                display: block;
+                font-family: 'Bungee Outline', cursive;
+                font-size: 65px;
+                margin-left: 60px;
+                letter-spacing: 85px;
+            }
+
+            &-sub{
+                display: block;
+                font-size: 20px;
+                letter-spacing: 10px;
+                font-weight: 400;
+            }
     }
 
-    &-sub{
-        display: block;
-        font-size: 20px;
-        letter-spacing: 10px;
-        font-weight: 400;
+    &__secondary{
+        display: inline-block;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-primary, $color-primary-main );
+        -webkit-background-clip: text;
+        color: transparent;
+        letter-spacing: 2px;
+        transition: all .2s;
+
+        &:hover{
+            transform: skewY(1deg) skewX(5deg) scale(1.05);
+            text-shadow: .5rem 1rem 2rem rgba($color-black,  .5);
+        }
     }
+
+    &__tertiary{
+        font-size: $default-font-size;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
 }
 
+
+.paragraph{
+    font-size: 1.5rem;
+
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
+}

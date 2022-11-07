@@ -24,6 +24,15 @@ body {
   100% {
     background-image: linear-gradient(to right bottom, #1d35579a, #162336a8), url(../../img/consulting-pic-1.jpg); } }
 
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: .5rem; }
+
 .heading__primary {
   color: #fff;
   text-transform: uppercase;
@@ -40,6 +49,92 @@ body {
     letter-spacing: 10px;
     font-weight: 400; }
 
+.heading__secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #1d35579a, #1d3557);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s; }
+  .heading__secondary:hover {
+    transform: skewY(1deg) skewX(5deg) scale(1.05);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
+
+.heading__tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.5rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 20px; }
+
+.btn__text:link, .btn__text:visited {
+  font-size: 1.6rem;
+  color: #1d3557;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #1d3557;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn__text:hover {
+  background-color: #1d3557;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn__text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.composition {
+  position: relative;
+  margin: 8rem 2rem; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2px; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 0.7rem solid #1d3557;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
+.section__about {
+  background-color: #f7f7f7;
+  padding: 20rem 0;
+  margin-top: -15vh; }
+
+.row {
+  display: grid;
+  width: 115rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 0 auto; }
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr); }
+
 .header {
   height: 100vh;
   background-image: linear-gradient(to right bottom, #1d35579a, #162336a8), url(../../img/consulting-pic-1.jpg);
@@ -48,7 +143,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  animation: change 15s infinite ease-in-out; }
+  animation: change 15s infinite;
+  transition: animation ease-in; }
   .header__text-box {
     position: absolute;
     top: 50%;

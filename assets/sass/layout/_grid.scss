@@ -1,0 +1,11 @@
+.row{
+    display: grid;
+    width: $grid-width;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.grid-4{
+    grid-template-columns: repeat(4, 1fr);
+}

@@ -9,8 +9,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    animation: change 15s infinite ease-in-out;
-
+    animation: change 15s infinite ;
+    transition: animation ease-in;
     &__text-box{
         @include center
     }
