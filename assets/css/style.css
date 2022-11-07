@@ -42,7 +42,8 @@ body {
     font-family: 'Bungee Outline', cursive;
     font-size: 65px;
     margin-left: 60px;
-    letter-spacing: 85px; }
+    letter-spacing: 80px;
+    overflow: hidden; }
   .heading__primary-sub {
     display: block;
     font-size: 20px;
@@ -124,6 +125,9 @@ body {
   background-color: #f7f7f7;
   padding: 20rem 0;
   margin-top: -15vh; }
+
+.section__features {
+  padding: 20rem 0; }
 
 .row {
   display: grid;
