@@ -33,6 +33,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: .5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .heading__primary {
   color: #fff;
   text-transform: uppercase;
@@ -42,7 +48,7 @@ body {
     font-family: 'Bungee Outline', cursive;
     font-size: 65px;
     margin-left: 60px;
-    letter-spacing: 80px;
+    letter-spacing: 75px;
     overflow: hidden; }
   .heading__primary-sub {
     display: block;
@@ -135,6 +141,64 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-3rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: transform .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    transform: translateX(-3rem) scale(1);
+    filter: blur(3px) brightness(88%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .section__about {
   background-color: #f7f7f7;
   padding: 20rem 0;
@@ -148,6 +212,12 @@ body {
   transform: skewY(-7deg); }
   .section__features > * {
     transform: skewY(7deg); }
+
+.section__stories {
+  padding: 15rem 0;
+  position: relative; }
+  .section__stories-row {
+    margin-bottom: 6rem; }
 
 .row {
   display: grid;
