@@ -1,6 +1,6 @@
 .section{
     &__about{
-        background-color: $color-gret-light-1;
+        background-color: $color-grey-light-1;
         padding: 20rem 0;
         margin-top: -15vh;
     
@@ -28,6 +28,28 @@
         &-row{
             margin-bottom: 6rem;
         }
+    }
+    
+
+    &__book{
+        padding: 15rem 10rem;
+        background-image: linear-gradient(to right bottom, $color-primary-main, $color-secondary-main);
+    }
+}
+
+.book{
+    background-image: linear-gradient(105deg, 
+    rgba($color-white, .9) 0%, 
+    rgba($color-white, .9) 50%, 
+    transparent 50%),url(../../../img/booking.jpg);
+    background-size: 100%;
+    height: 50rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+
+    &__form{
+        width: 50%;
+        padding: 4rem;
     }
 }
 
