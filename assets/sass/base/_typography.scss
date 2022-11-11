@@ -12,13 +12,37 @@
                 margin-left: 60px;
                 letter-spacing: 75px;
                 overflow: hidden;
+
+                @include respond(tab-port){
+                    margin-left: 0px;
+                    letter-spacing: 4rem;
+                    font-size: 5rem;
+                }
+
+                @include respond(phone){
+                    margin-left: 0px;
+                    letter-spacing: 1rem;
+                    font-size: 5rem;
+                }
             }
+
+               
+        
 
             &-sub{
                 display: block;
                 font-size: 20px;
                 letter-spacing: 10px;
                 font-weight: 400;
+                
+                @include respond(tab-port){
+                    letter-spacing: 8px;
+                }
+
+                @include respond(phone){
+                    letter-spacing: 5px;
+                    font-size: 17px;
+                }
             }
     }
 
@@ -33,9 +57,23 @@
         letter-spacing: 2px;
         transition: all .2s;
 
+        @include respond(tab-port){
+            font-size: 2.5rem;
+        }
+
+        @include respond(phone){
+            font-size: 2rem;
+        }
+
         &:hover{
             transform: skewY(1deg) skewX(5deg) scale(1.05);
             text-shadow: .5rem 1rem 2rem rgba($color-black,  .5);
+        }
+
+        &:last-child{
+            @include respond(phone){
+                text-align: center;
+            }
         }
     }
 

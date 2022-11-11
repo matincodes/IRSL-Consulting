@@ -1,11 +1,29 @@
 .row{
     display: grid;
-    width: $grid-width;
+    max-width: $grid-width;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 0 auto;
+
+    @include respond(tab-port){
+        max-width: 60rem;
+        grid-template-columns: 1fr;
+        padding: 0 3rem;
+    }
 }
+
+.col{
+    @include respond(tab-port){
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 .grid-4{
     grid-template-columns: repeat(4, 1fr);
+
+    @include respond(tab-port){
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
 }

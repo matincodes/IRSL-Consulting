@@ -11,6 +11,10 @@
     position: relative;
     animation: change 15s infinite ;
     transition: animation ease-in;
+
+    @include respond(phone){
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    }
     &__text-box{
         @include center
     }
@@ -19,6 +23,10 @@
         position: absolute;
         top: 25px;
         left: 40px;
+
+        @include respond(tab-port){
+            top: 35px;
+        }
     }
 }
 

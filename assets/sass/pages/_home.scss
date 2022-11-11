@@ -19,6 +19,10 @@
         & > *{
             transform: skewY(7deg);
         }
+
+        @include respond(tab-port){
+            padding: 10rem 0;
+        }
     }
 
     &__stories{
@@ -34,6 +38,10 @@
     &__book{
         padding: 15rem 10rem;
         background-image: linear-gradient(to right bottom, $color-primary-main, $color-secondary-main);
+
+        @include respond(phone){
+            padding: 5rem;
+        }
     }
 }
 
@@ -43,13 +51,34 @@
     rgba($color-white, .9) 50%, 
     transparent 50%),url(../../../img/booking.jpg);
     background-size: 100%;
-    height: 50rem;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+
+    @include respond(tab-land){
+        background-image: linear-gradient(105deg, 
+        rgba($color-white, .9) 0%, 
+        rgba($color-white, .9) 65%, 
+        transparent 65%),url(../../../img/booking.jpg);
+        background-size: cover;
+    }
+
+    @include respond(tab-port){
+        background-image: linear-gradient(to right, 
+        rgba($color-white, .9) 0%, 
+        rgba($color-white, .9) 100%),url(../../../img/booking.jpg);
+    }
 
     &__form{
         width: 50%;
         padding: 4rem;
+
+        @include respond(tab-land){
+            width: 65%;
+        }
+
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 }
 
