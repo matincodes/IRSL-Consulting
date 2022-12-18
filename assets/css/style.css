@@ -158,6 +158,12 @@ body {
   .btn--blue::after {
     background-color: #1d3557; }
 
+.btn--white {
+  background-color: #fff;
+  color: #000; }
+  .btn--white::after {
+    background-color: #fff; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -237,6 +243,81 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    background-color: orangered;
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 40px rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../../img/Benefits-of-SAP-Software.jpeg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../../img/Everything-SAP-Business-One-Can-Do-and-More.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../../img/Career-in-SAP-Security-and-GRC-1.jpg); }
+  .card__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      font-size: 2.2rem;
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 1rem;
+    padding-top: 1.3rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
@@ -244,7 +325,8 @@ body {
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform .3s; }
+  transition: transform .3s;
+  height: 100%; }
   @media (max-width: 56.25em) {
     .feature-box {
       padding: 2rem; } }
@@ -253,6 +335,8 @@ body {
     margin-bottom: .5rem; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+  .feature-box img {
+    width: 70px; }
 
 .story {
   width: 75%;
@@ -440,6 +524,11 @@ body {
     .section__book {
       padding: 5rem; } }
 
+.section__blog {
+  background-color: #f7f7f7;
+  padding: 20rem 10rem 20rem 10rem;
+  margin-top: -15vh; }
+
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../../img/booking.jpg);
   background-size: 100%;
@@ -482,6 +571,14 @@ body {
   grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 56.25em) {
     .grid-4 {
+      width: 100%;
+      grid-template-columns: 1fr; } }
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem; }
+  @media (max-width: 56.25em) {
+    .grid-3 {
       width: 100%;
       grid-template-columns: 1fr; } }
 
@@ -652,6 +749,9 @@ body {
   .footer__item {
     display: inline-block; }
     .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+    .footer__item img {
+      width: 30px;
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
     text-decoration: none;

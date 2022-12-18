@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    animation: change 15s infinite ;
+    animation: change 15s infinite;
     transition: animation ease-in;
 
     @include respond(phone){

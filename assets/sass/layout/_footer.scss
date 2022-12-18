@@ -43,6 +43,11 @@
         &:not(:last-child){
             margin-right: 1.5rem;
         }
+
+        img{
+            width: 30px;
+            margin-right:1.5rem;   
+        }
     }
 
     &__link{
